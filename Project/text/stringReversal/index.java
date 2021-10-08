@@ -1,12 +1,14 @@
 package stringReversal;
 
-
 import java.util.*;
+/**
+ * Description: Enter a string and the program will reverse it and print it out.
+ */
 
 public class index {
 
     public String stringToArrayListReversal(String input) {
-        List<Character> listOfChars = new ArrayList<>();
+        ArrayList<Character> listOfChars = new ArrayList<>();
         String userInput = input;
         char[] inputString = userInput.toCharArray();
         for (char character : inputString) {
@@ -23,52 +25,73 @@ public class index {
     }
 
 
-    public void stringToArrayListReversal() {
-        Scanner input = new Scanner(System.in);
-        List<Character> listOfChars = new ArrayList<>();
+//    public void stringToArrayListReversal() {
+//        Scanner input = new Scanner(System.in);
+//        List<Character> listOfChars = new ArrayList<>();
+//
+//        System.out.println("Enter a string to reverse: ");
+//        String userInput = input.nextLine();
+//        char[] inputString = userInput.toCharArray();
+//
+//        for (char character : inputString) {
+//            listOfChars.add(character);
+//        }
+//        Collections.reverse(listOfChars);
+//        System.out.print("In reverse: ");
+//
+//        for (Character listOfChar : listOfChars) {
+//            System.out.print(listOfChar);
+//        }
+//
+//
+//    }
 
-        System.out.println("Enter a string to reverse: ");
-        String userInput = input.nextLine();
-        char[] inputString = userInput.toCharArray();
+//    public void stringToStringBuilderReversal() {
+//        Scanner input = new Scanner(System.in);
+//        StringBuilder stringInput = new StringBuilder();
+//
+//        System.out.println("Enter a string to reverse: ");
+//        String userInput = input.nextLine();
+//        stringInput.append(userInput);
+//        System.out.println("Your input was: " + userInput);
+//        stringInput.reverse();
+//        System.out.println("In reverse: " + stringInput);
+//
+//    }
 
-        for (char character : inputString) {
-            listOfChars.add(character);
-        }
-        Collections.reverse(listOfChars);
-        System.out.print("In reverse: ");
-
-        for (Character listOfChar : listOfChars) {
-            System.out.print(listOfChar);
-        }
-
-
-    }
-
-    public void stringToStringBuilderReversal() {
-        Scanner input = new Scanner(System.in);
+    public String stringToStringBuilderReversal(String input) {
         StringBuilder stringInput = new StringBuilder();
-
-        System.out.println("Enter a string to reverse: ");
-        String userInput = input.nextLine();
-        stringInput.append(userInput);
-        System.out.println("Your input was: " + userInput);
+        stringInput.append(input);
         stringInput.reverse();
-        System.out.println("In reverse: " + stringInput);
+
+        return stringInput.toString();
+
 
     }
 
-    public void stringToArrayReversal() {
-        Scanner input = new Scanner(System.in);
-        System.out.println("Enter a string to reverse: ");
-        String userInput = input.nextLine();
-        System.out.println("Your input was: " + userInput);
+//    public void stringToArrayReversal() {
+//        Scanner input = new Scanner(System.in);
+//        System.out.println("Enter a string to reverse: ");
+//        String userInput = input.nextLine();
+//        System.out.println("Your input was: " + userInput);
+//
+//        char[] charToArray = userInput.toCharArray();
+//        for (int i = charToArray.length - 1; i >= 0; i--) {
+//            System.out.print(charToArray[i]);
+//        }
+//
+//
+//    }
 
-        char[] charToArray = userInput.toCharArray();
+    // without StringBuilder
+    public String stringToArrayReversal(String input) {
+        char[] charToArray = input.toCharArray();
+        String reversed = "";
         for (int i = charToArray.length - 1; i >= 0; i--) {
-            System.out.print(charToArray[i]);
+            reversed = reversed + charToArray[i];
         }
 
-
+        return reversed;
     }
 
 

@@ -3,6 +3,7 @@ package Test;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
+//import package.classname
 import stringReversal.index;
 /**
  * DO NOT MODIFY
@@ -25,11 +26,29 @@ import stringReversal.index;
 
     @Test
     void stringToStringBuilderReversal() {
+        index index = new index();
+        String expected = "olleh";
+        String expected1 = "yfitops";
+        String expected2 = "tnedirT";
+
+        assertEquals(expected, index.stringToStringBuilderReversal("hello"));
+        assertEquals(expected1,index.stringToStringBuilderReversal("spotify"));
+        assertNotEquals(expected2, index.stringToStringBuilderReversal("trident"));
+
 
     }
 
     @Test
     void stringToArrayReversal() {
+        index index = new index();
+        String expected = "olleh";
+        String expected1 = "yfitops";
+        String expected2 = "tnedirT";
+
+        assertEquals(expected, index.stringToArrayReversal("hello"));
+        assertEquals(expected1,index.stringToArrayReversal("spotify"));
+        assertNotEquals(expected2, index.stringToArrayReversal("trident"));
+
     }
 
 
